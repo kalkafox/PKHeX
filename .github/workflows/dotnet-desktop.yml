@@ -2,9 +2,9 @@ name: .NET Core Desktop (Standalone EXE)
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "actions-build" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "actions-build" ]
 
 jobs:
   build:
