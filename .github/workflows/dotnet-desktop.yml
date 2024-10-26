@@ -15,8 +15,8 @@ jobs:
     runs-on: windows-latest
 
     env:
-      Solution_Name: your-solution-name.sln       # Replace with your solution name
-      Project_Path: PKHex.WinForms\PKHeX.WinForms.csproj # Replace with the path to your project file
+      Solution_Name: PKHeX.sln
+      Project_Path: PKHex.WinForms\PKHeX.WinForms.csproj
 
     steps:
     - name: Checkout
