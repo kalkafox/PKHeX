@@ -37,15 +37,7 @@ jobs:
 
     # Build the project as a standalone exe
     - name: Publish as self-contained EXE
-      run: |
-        dotnet publish ${{ env.Project_Path }} \
-            --configuration ${{ matrix.configuration }} \
-            --runtime win-x64 \
-            -p:PublishSingleFile=true \
-            -p:PublishTrimmed=true \
-            -p:IncludeNativeLibrariesForSelfExtract=true \
-            -p:PublishReadyToRun=true \
-            -o ./output
+      run: dotnet publish ${{ env.Project_Path }} --configuration Release --runtime win-x64 -p:PublishSingleFile=true -p:PublishTrimmed=true -p:IncludeNativeLibrariesForSelfExtract=true -p:PublishReadyToRun=true -o ./output
     # Upload the EXE build as an artifact
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
